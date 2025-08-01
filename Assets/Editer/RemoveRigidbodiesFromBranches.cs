@@ -13,14 +13,14 @@ public class RemoveRigidbodiesFromBranches
         {
             if (branch == null) continue;
 
-            Rigidbody rb = branch.GetComponent<Rigidbody>();
+            Rigidbody2D rb = branch.GetComponent<Rigidbody2D>();
             if (rb != null)
             {
                 Object.DestroyImmediate(rb);
                 count++;
             }
 
-            Collider col = branch.GetComponent<Collider>();
+            Collider2D col = branch.GetComponent<Collider2D>();
             if (col != null)
             {
                 Object.DestroyImmediate(col);
