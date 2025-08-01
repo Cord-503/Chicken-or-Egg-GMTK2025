@@ -417,6 +417,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7473955586853033158, guid: 271f532c2fab710428a5f3c76cda9e91, type: 3}
   m_PrefabInstance: {fileID: 6164210102443605063}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1944522338 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5489439327073967674, guid: 271f532c2fab710428a5f3c76cda9e91, type: 3}
+  m_PrefabInstance: {fileID: 6164210102443605063}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1944522337}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ffab0cba37476b4ea4516dc0d61615c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!58 &1944522340
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -453,6 +464,19 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0.347701, y: 0.15873289}
   m_Radius: 0.5317469
+--- !u!114 &1944522341
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1944522337}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9623afca91dc63c45a918e48ec2da317, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dandelion: {fileID: 1944522338}
 --- !u!1001 &6164210102443605063
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -900,6 +924,18 @@ PrefabInstance:
     - target: {fileID: 5407113447120664408, guid: 271f532c2fab710428a5f3c76cda9e91, type: 3}
       propertyPath: m_TagString
       value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 5489439327073967674, guid: 271f532c2fab710428a5f3c76cda9e91, type: 3}
+      propertyPath: windForce
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5489439327073967674, guid: 271f532c2fab710428a5f3c76cda9e91, type: 3}
+      propertyPath: explosionForce
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5489439327073967674, guid: 271f532c2fab710428a5f3c76cda9e91, type: 3}
+      propertyPath: explosionRandomness
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 5593105630810461701, guid: 271f532c2fab710428a5f3c76cda9e91, type: 3}
       propertyPath: m_TagString
@@ -1478,6 +1514,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7473955586853033158, guid: 271f532c2fab710428a5f3c76cda9e91, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1944522340}
+    - targetCorrespondingSourceObject: {fileID: 7473955586853033158, guid: 271f532c2fab710428a5f3c76cda9e91, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1944522341}
     - targetCorrespondingSourceObject: {fileID: 1366568295631042859, guid: 271f532c2fab710428a5f3c76cda9e91, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1804679522}
