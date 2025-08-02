@@ -2,26 +2,35 @@ using UnityEngine;
 
 public class Dandelion : MonoBehaviour
 {
+    [Header("爆炸参数")]
     public float explosionForce = 3f;
+    public float explosionRandomness = 0.3f;
+
+    [Header("风力参数")]
     public float windForce = 0.5f;
-    public float floatDuration = 3f;
+    public Vector2 windDirection = new Vector2(1f, 1f);
+    public float floatDuration = 4f;
 
     private bool hasExploded = false;
 
-    void Update()
+    void Start()
     {
-        if (Input.GetMouseButtonDown(0) && !hasExploded)
+        GameObject[] branches = GameObject.FindGameObjectsWithTag("branch");
+        foreach (GameObject branch in branches)
         {
-            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            if (Physics.Raycast(ray, out RaycastHit hit))
-            {
-                if (hit.transform == transform)
-                {
-                    Explode();
-                    hasExploded = true;
-                }
-            }
+            Rigidbody2D rb = branch.GetComponent<Rigidbody2D>();
+            if (rb == null)
+                rb = branch.AddComponent<Rigidbody2D>();
+
+            rb.gravityScale = 0f;
+            rb.simulated = false;
         }
+    }
+    public void TriggerExplosion()
+    {
+        if (hasExploded) return;
+        Explode();
+        hasExploded = true;
     }
 
     void Explode()
@@ -29,27 +38,28 @@ public class Dandelion : MonoBehaviour
         GameObject[] branches = GameObject.FindGameObjectsWithTag("branch");
         foreach (GameObject branch in branches)
         {
-            Rigidbody rb = branch.GetComponent<Rigidbody>();
-            if (rb == null)
-                rb = branch.AddComponent<Rigidbody>();
+            Rigidbody2D rb = branch.GetComponent<Rigidbody2D>();
+            if (rb == null) continue;
 
-            rb.useGravity = false;
+            rb.simulated = true;
 
-            Vector3 explosionDir = (branch.transform.position - transform.position).normalized + Random.insideUnitSphere * 0.3f;
-            rb.AddForce(explosionDir * explosionForce, ForceMode.Impulse);
+            Vector2 explosionDir = (Vector2)(branch.transform.position - transform.position).normalized;
+            explosionDir += Random.insideUnitCircle * explosionRandomness;
+
+            rb.AddForce(explosionDir.normalized * explosionForce, ForceMode2D.Impulse);
 
             StartCoroutine(ApplyWind(rb));
         }
     }
 
-    System.Collections.IEnumerator ApplyWind(Rigidbody rb)
+    System.Collections.IEnumerator ApplyWind(Rigidbody2D rb)
     {
         float timer = 0f;
-        Vector3 windDir = new Vector3(1f, 1f, 0.5f).normalized;
+        Vector2 windDir = windDirection.normalized;
 
         while (timer < floatDuration)
         {
-            rb.AddForce(windDir * windForce, ForceMode.Force);
+            rb.AddForce(windDir * windForce, ForceMode2D.Force);
             timer += Time.deltaTime;
             yield return null;
         }

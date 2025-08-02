@@ -13,10 +13,10 @@ public class AddRigidbodiesToBranches
         {
             if (branch == null) continue;
 
-            if (branch.GetComponent<Collider2D>() == null)
-            {
-                branch.AddComponent<PolygonCollider2D>();
-            }
+            //if (branch.GetComponent<Collider2D>() == null)
+            //{
+            //    branch.AddComponent<PolygonCollider2D>();
+            //}
 
             Rigidbody2D rb = branch.GetComponent<Rigidbody2D>();
             if (rb == null)
