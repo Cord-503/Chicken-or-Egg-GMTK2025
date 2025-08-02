@@ -5,7 +5,6 @@ public class MyceliumWalker : MonoBehaviour
 {
     [Header("Walker Settings")]
     public int walkers = 20;
-    public int stepsPerWalker = 50;
     public float stepLength = 0.2f;
     [Range(0,1)] public float branchChance = 0.05f;
 
@@ -15,31 +14,55 @@ public class MyceliumWalker : MonoBehaviour
     [Header("Rendering")]
     public GameObject lineSegmentPrefab;      // prefab with a LineRenderer
 
-    // Tracks how many walker-coroutines are still “alive”
-    private int remainingWalkers;
-
-    /// <summary>
-    /// The computed visual center in world coords.  Valid only once IsReady == true.
-    /// </summary>
-    public Vector3 center;
 
     /// <summary>
     /// Flip to true once CenterMycelium() has run.
     /// </summary>
     public bool IsReady { get; private set; }
 
-    IEnumerator Start()
+    public event System.Action OnFullyGrown;
+    public Vector3 center { get; private set; }
+
+    // internal tracking
+    private int totalWalkers, stepsPerWalker;
+    private int remainingWalkers;
+    private bool hasFiredEvent;
+
+
+    /// <summary>
+    /// Call this to start a batch of walkers.
+    /// </summary>
+    public void Generate(int walkerCount, int stepsEach)
     {
-        remainingWalkers = walkers;
-        for (int i = 0; i < walkers; i++)
+        totalWalkers     
+            = remainingWalkers
+            = walkerCount;
+        stepsPerWalker   = stepsEach;
+        hasFiredEvent    = false;
+
+        for (int i = 0; i < walkerCount; i++)
+            StartCoroutine(SpawnWalker());
+    }
+
+    /// <summary>
+    /// Feed the fungus to get more growth.
+    /// </summary>
+    public void ContinueGrowth(int moreWalkers, int moreStepsPerWalker)
+    {
+        totalWalkers += moreWalkers;
+        remainingWalkers += moreWalkers;
+
+        // you could choose to override stepsPerWalker or keep the old one
+        int oldSteps = stepsPerWalker;
+        stepsPerWalker = moreStepsPerWalker;
+
+        for (int i = 0; i < moreWalkers; i++)
             StartCoroutine(SpawnWalker());
 
-        // wait until every branch and walker is done
-        yield return new WaitUntil(() => remainingWalkers == 0);
-
-        CenterMycelium();
-        IsReady = true;   // signal to spawner that center is valid
+        // restore
+        stepsPerWalker = oldSteps;
     }
+
 
     IEnumerator SpawnWalker()
     {
@@ -75,25 +98,39 @@ public class MyceliumWalker : MonoBehaviour
         }
 
         remainingWalkers--;
+
+        if (remainingWalkers == 0 && !hasFiredEvent)
+        {
+            hasFiredEvent = true;
+            CenterMycelium();
+            IsReady = true;
+            OnFullyGrown?.Invoke();
+        }
     }
 
     void CenterMycelium()
     {
         var lines = GetComponentsInChildren<LineRenderer>();
         if (lines.Length == 0) return;
-        Debug.Log("lines: " + lines.Length);
+
         Vector3 min = Vector3.positiveInfinity, max = Vector3.negativeInfinity;
         foreach (var lr in lines)
             for (int i = 0; i < 2; i++)
             {
-                var p = lr.GetPosition(i);
+                Vector3 p = lr.GetPosition(i);
                 min = Vector3.Min(min, p);
                 max = Vector3.Max(max, p);
             }
-        // world‐space midpoint of the cloud
-        center = (min + max) * 0.5f;
-        // lock Y and Z to the prefab’s transform so we only use the X‐offset
-        center.y = 0;
-        center.z = 0;
+
+        // compute midpoint
+        Vector3 c = (min + max) * 0.5f;
+
+        // lock Y and Z to the walker’s own transform so only X offset remains
+        c.y = transform.position.y;
+        c.z = transform.position.z;
+
+        // now assign to the property
+        center = c;
     }
+
 }

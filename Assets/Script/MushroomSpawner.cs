@@ -28,6 +28,15 @@ public class MushroomSpawner2D : MonoBehaviour
         StartCoroutine(SpawnAllAfterDelay());
     }
 
+    public void SpawnAt(Vector3 worldPos)
+    {
+        Instantiate(
+          mushroomPrefab,
+          worldPos,
+          Quaternion.identity
+        );
+    }
+
     IEnumerator SpawnAllAfterDelay()
     {
         // 1) Spawn all mycelium and collect their walker scripts
