@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 3422b09b18ca048acb4a9b4add23abb9
+guid: 53c6e4064c81a460bb854354ec08a6c4
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3099417627711092882
-    second: mushroom_sprite_0
+      213: 6430100609296634712
+    second: homework_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,23 +113,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: mushroom_sprite_0
+      name: homework_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 648
-        height: 940
-      alignment: 9
-      pivot: {x: 0.50645995, y: 0.0027351845}
+        width: 2848
+        height: 2979
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 298bd4639e7530b20800000000000000
-      internalID: 3099417627711092882
+      spriteID: 853162f9f6e4c3950800000000000000
+      internalID: 6430100609296634712
       vertices: []
       indices: 
       edges: []
@@ -138,7 +138,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: ec60bfcd2271f490d9f2418116502c5b
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      mushroom_sprite_0: 3099417627711092882
+      homework_0: 6430100609296634712
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

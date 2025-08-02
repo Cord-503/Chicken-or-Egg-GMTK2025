@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 5b232af6ee2ef4f82a74e03e80de5aca
+guid: 1cba51ccc11f6404291be2ec023ca63a
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2889643037175875301
-    second: soda_can_0
+      213: -5986240587178107622
+    second: plastic_bag_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: soda_can_0
+      name: plastic_bag_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 612
-        height: 530
+        x: 64
+        y: 99
+        width: 400
+        height: 423
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 5e68c8648031a1820800000000000000
-      internalID: 2889643037175875301
+      spriteID: a1d193507e99ceca0800000000000000
+      internalID: -5986240587178107622
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      soda_can_0: 2889643037175875301
+      plastic_bag_0: -5986240587178107622
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

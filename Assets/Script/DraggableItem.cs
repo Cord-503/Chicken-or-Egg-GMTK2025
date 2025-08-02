@@ -1,13 +1,15 @@
 // DraggableItem.cs
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.EventSystems;
 
-public enum ItemType { Apple, Rock, SodaCan, Wood }
+public enum ItemType { PlasticBag, ToothBrush, Orange, Meat, CD, MilkJar, Comb, SodaCan, Leaf, Coin, Homework, Cellphone }
 
 public class DraggableItem : MonoBehaviour,
     IBeginDragHandler, IDragHandler, IEndDragHandler
 {
     public ItemType itemType;
+    public Image    icon;
     private CanvasGroup canvasGroup;
     private RectTransform rect;
     private Vector2 startPos;

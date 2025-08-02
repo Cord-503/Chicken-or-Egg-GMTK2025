@@ -3,8 +3,23 @@ using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 
+[System.Serializable]
+public class QuizStage
+{
+    public ItemType[] options;     // which items to show
+    public Sprite[]  sprites;      // matching icons
+    public ItemType  correct;      // the one “food” that works
+}
+
 public class MushroomGameManager : MonoBehaviour
 {
+    [Header("Quiz Stages")]
+    public QuizStage[] stages;
+
+    [Header("UI")]
+    public Transform           inventoryPanel;     // the Panel under your Canvas
+    public DraggableItem       optionPrefab; 
+
     [Header("References")]
     public MyceliumWalker  mycelium;
     public MushroomSpawner2D spawner;
@@ -16,10 +31,31 @@ public class MushroomGameManager : MonoBehaviour
 
     private bool hasFinishedGrowth = false;
     private int feedCount = 0;
+    private int currentStage = 0;
+
     void Start()
     {
         // start an initial baby mycelium
         mycelium.Generate(initialWalkers, steps);
+        ShowStage(0);
+    }
+
+    void ShowStage(int idx)
+    {
+        // clear old icons
+        foreach (Transform t in inventoryPanel) Destroy(t.gameObject);
+
+        var stage = stages[idx];
+        for (int i = 0; i < stage.options.Length; i++)
+        {
+            Debug.Log(optionPrefab);
+            Debug.Log(inventoryPanel);
+            Debug.Log(stage.options[i]);
+            Debug.Log(stage.sprites[i]);
+            var opt = Instantiate(optionPrefab, inventoryPanel);
+            opt.itemType = stage.options[i];
+            opt.icon.sprite = stage.sprites[i];
+        }
     }
 
 
@@ -27,23 +63,29 @@ public class MushroomGameManager : MonoBehaviour
     {
         if (hasFinishedGrowth) return;
 
-        if (edibleItems.Contains(item.itemType))
+        var stage = stages[currentStage];
+        if (item.itemType == stage.correct)
         {
-            // feed it—grow a bit more
+            FadeAndRemove(item);
+            // grow it
             feedCount++;
-            mycelium.ContinueGrowth(mycelium.walkers, steps * (1 + feedCount));
-            
-            // fade out the item in place and then destroy it
-            StartCoroutine(FadeAndRemove(item));
+            mycelium.ContinueGrowth(20, 3*(1+currentStage));
 
-            // once we’ve given every edible, spawn the mushroom
-            if (feedCount >= edibleItems.Count)
+            // advance
+            currentStage++;
+            if (currentStage < stages.Length)
             {
-                spawner.SpawnAt(mycelium.center);
+                ShowStage(currentStage);
+            }
+            else
+            {
+                // quiz done
                 hasFinishedGrowth = true;
+                spawner.SpawnAt(mycelium.center + mycelium.transform.position);
             }
         }
     }
+
 
     private IEnumerator FadeAndRemove(DraggableItem item)
     {
@@ -51,6 +93,7 @@ public class MushroomGameManager : MonoBehaviour
         item.GetComponent<CanvasGroup>().blocksRaycasts = false;
 
         CanvasGroup cg = item.GetComponent<CanvasGroup>();
+        if (cg == null) yield break;
         float duration = 1f;
         float elapsed = 0f;
         float start = cg.alpha;
