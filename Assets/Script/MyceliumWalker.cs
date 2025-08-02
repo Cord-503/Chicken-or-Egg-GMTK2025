@@ -53,14 +53,11 @@ public class MyceliumWalker : MonoBehaviour
         remainingWalkers += moreWalkers;
 
         // you could choose to override stepsPerWalker or keep the old one
-        int oldSteps = stepsPerWalker;
         stepsPerWalker = moreStepsPerWalker;
 
         for (int i = 0; i < moreWalkers; i++)
             StartCoroutine(SpawnWalker());
 
-        // restore
-        stepsPerWalker = oldSteps;
     }
 
 
@@ -126,8 +123,8 @@ public class MyceliumWalker : MonoBehaviour
         Vector3 c = (min + max) * 0.5f;
 
         // lock Y and Z to the walker’s own transform so only X offset remains
-        c.y = transform.position.y;
-        c.z = transform.position.z;
+        c.y = 0;
+        c.z = 0;
 
         // now assign to the property
         center = c;

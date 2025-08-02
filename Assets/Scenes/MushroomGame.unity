@@ -1103,6 +1103,7 @@ MonoBehaviour:
   scaleRange: {x: 0.8, y: 1.2}
   myceliumScale: 0.75
   hueOffset: 0.1
+  autoStart: 0
 --- !u!4 &1675451752
 Transform:
   m_ObjectHideFlags: 0
@@ -1167,8 +1168,7 @@ MonoBehaviour:
   mycelium: {fileID: 864328389}
   spawner: {fileID: 1675451751}
   initialWalkers: 20
-  steps: 5
-  total_steps: 10
+  steps: 3
   edibleItems: 0000000003000000
 --- !u!1 &1987789589
 GameObject:

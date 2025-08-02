@@ -475,6 +475,7 @@ MonoBehaviour:
   scaleRange: {x: 0.8, y: 1.2}
   myceliumScale: 0.75
   hueOffset: 0.1
+  autoStart: 1
 --- !u!4 &1675451752
 Transform:
   m_ObjectHideFlags: 0

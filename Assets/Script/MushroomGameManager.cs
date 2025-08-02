@@ -32,7 +32,7 @@ public class MushroomGameManager : MonoBehaviour
             // feed it—grow a bit more
             feedCount++;
             mycelium.ContinueGrowth(mycelium.walkers, steps * (1 + feedCount));
-
+            
             // fade out the item in place and then destroy it
             StartCoroutine(FadeAndRemove(item));
 
@@ -51,7 +51,7 @@ public class MushroomGameManager : MonoBehaviour
         item.GetComponent<CanvasGroup>().blocksRaycasts = false;
 
         CanvasGroup cg = item.GetComponent<CanvasGroup>();
-        float duration = 0.5f;
+        float duration = 1f;
         float elapsed = 0f;
         float start = cg.alpha;
 
