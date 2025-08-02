@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 3
   tags:
   - branch
+  - Fish
   layers:
   - Default
   - TransparentFX

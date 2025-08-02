@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections;
 
 public class Dandelion : MonoBehaviour
 {
@@ -8,8 +9,11 @@ public class Dandelion : MonoBehaviour
 
     [Header("风力参数")]
     public float windForce = 0.5f;
-    public Vector2 windDirection = new Vector2(1f, 1f);
+    public float windForceVariance = 0.2f;
+    public float windAngleVariance = 30f;
     public float floatDuration = 4f;
+    public float floatDurationVariance = 1f;
+    public Vector2 windDirection = new Vector2(1f, 0f);
 
     private bool hasExploded = false;
 
@@ -26,6 +30,7 @@ public class Dandelion : MonoBehaviour
             rb.simulated = false;
         }
     }
+
     public void TriggerExplosion()
     {
         if (hasExploded) return;
@@ -48,18 +53,27 @@ public class Dandelion : MonoBehaviour
 
             rb.AddForce(explosionDir.normalized * explosionForce, ForceMode2D.Impulse);
 
-            StartCoroutine(ApplyWind(rb));
+            // 生成每个 branch 独立的风力和风向
+            float windMagnitude = windForce + Random.Range(-windForceVariance, windForceVariance);
+
+            float angleOffset = Random.Range(-windAngleVariance, windAngleVariance);
+            float baseAngle = Mathf.Atan2(windDirection.y, windDirection.x) * Mathf.Rad2Deg;
+            float randomAngle = baseAngle + angleOffset;
+            Vector2 randomizedWindDirection = new Vector2(Mathf.Cos(randomAngle * Mathf.Deg2Rad), Mathf.Sin(randomAngle * Mathf.Deg2Rad)).normalized;
+
+            float duration = floatDuration + Random.Range(-floatDurationVariance, floatDurationVariance);
+
+            StartCoroutine(ApplyWind(rb, randomizedWindDirection, windMagnitude, duration));
         }
     }
 
-    System.Collections.IEnumerator ApplyWind(Rigidbody2D rb)
+    IEnumerator ApplyWind(Rigidbody2D rb, Vector2 windDir, float windStrength, float duration)
     {
         float timer = 0f;
-        Vector2 windDir = windDirection.normalized;
 
-        while (timer < floatDuration)
+        while (timer < duration)
         {
-            rb.AddForce(windDir * windForce, ForceMode2D.Force);
+            rb.AddForce(windDir * windStrength, ForceMode2D.Force);
             timer += Time.deltaTime;
             yield return null;
         }
