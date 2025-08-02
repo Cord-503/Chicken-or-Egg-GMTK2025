@@ -389,7 +389,7 @@ MonoBehaviour:
   windForce: 0.1
   windForceVariance: 0.2
   windAngleVariance: 20
-  floatDuration: 7
+  floatDuration: 10
   floatDurationVariance: 1
   windDirection: {x: 1, y: 1}
 --- !u!58 &2309193964065391384
