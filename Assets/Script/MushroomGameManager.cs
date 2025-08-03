@@ -3,6 +3,8 @@ using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
+using TMPro;
 
 [System.Serializable]
 public class QuizStage
@@ -29,6 +31,11 @@ public class MushroomGameManager : MonoBehaviour
     public int initialWalkers   = 5;
     public int steps     = 20;
     public List<ItemType> edibleItems;
+
+    [SerializeField] private Animator fadeInOutBlack_Anim;
+    [SerializeField] private float delay = 3.0f;
+    [SerializeField] private TextMeshProUGUI instructionText;
+
 
     private bool hasFinishedGrowth = false;
     private int feedCount = 0;
@@ -73,7 +80,11 @@ public class MushroomGameManager : MonoBehaviour
             FadeAndRemove(item);
             // grow it
             feedCount++;
-            mycelium.ContinueGrowth(20, 5 + 3*currentStage);
+            instructionText.text = "Nice choices. Your mycelium has grown!";
+
+
+
+            mycelium.ContinueGrowth(20, 5 + 3 * currentStage);
 
             // advance
             currentStage++;
@@ -88,8 +99,15 @@ public class MushroomGameManager : MonoBehaviour
                 Destroy(item.gameObject);
                 spawner.SpawnAt(mycelium.center + mycelium.transform.position);
             }
+            // 加入游戏结束判断
+            if (feedCount >= 4)
+            {
+                GameOver();
+                return;
+            }
         }
     }
+
 
 
     private IEnumerator FadeAndRemove(DraggableItem item)
@@ -113,4 +131,24 @@ public class MushroomGameManager : MonoBehaviour
         // finally, destroy the UI object
         Destroy(item.gameObject);
     }
+
+    private void GameOver()
+    {
+
+        // 可选：停止一切进一步交互
+        hasFinishedGrowth = true;
+        instructionText.text = "Congratulations, your mycelium has grown into a mushroom!";
+        // TODO: 添加你想做的游戏结束逻辑，比如切换场景、弹出UI、统计得分等
+        StartCoroutine(DelayAndLoadScene(delay));
+    }
+
+    IEnumerator DelayAndLoadScene(float d)
+    {
+        yield return new WaitForSeconds(d);
+        fadeInOutBlack_Anim.SetBool("FadeOut", true);
+        yield return new WaitForSeconds(0.5f);
+        SceneManager.LoadScene("EndScene");
+    }
 }
+
+

@@ -6,9 +6,6 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
-    guid: 8c9cfa26abfee488c85f1582747f6a02
-  - enabled: 1
     path: Assets/Scenes/Opening.unity
     guid: 1777a7feeb53c8f40b4e0d267a9fc3ea
   - enabled: 1
@@ -17,6 +14,18 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/IntroduceDandelion.unity
     guid: 979d7df7113db834281135ee42899aa7
+  - enabled: 1
+    path: Assets/Scenes/Mushroom.unity
+    guid: 830954f9bfa394a4598c4bcd2d0dc143
+  - enabled: 1
+    path: Assets/Scenes/MushroomGame.unity
+    guid: 5e80b2bea178047749c9602074938653
+  - enabled: 1
+    path: Assets/Scenes/EndScene.unity
+    guid: 8d1975f84485ce142b17e03fad79459d
+  - enabled: 1
+    path: Assets/Scenes/Credit.unity
+    guid: 5165b0f4ee467084f816ffaef4c2170f
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0

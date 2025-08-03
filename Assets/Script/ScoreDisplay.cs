@@ -19,4 +19,7 @@ public class ScoreDisplay : MonoBehaviour
     {
         scoreText.text = "Score: " + newScore.ToString();
     }
+
+
+
 }

@@ -5,7 +5,7 @@ using System.Collections;
 
 public class MyceliumDropZone : MonoBehaviour, IDropHandler
 {
-    public MushroomGameManager gameManager; 
+    public MushroomGameManager gameManager;
 
     public void OnDrop(PointerEventData e)
     {
