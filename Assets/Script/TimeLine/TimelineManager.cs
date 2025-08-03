@@ -5,7 +5,7 @@ public class TimelineManager : MonoBehaviour
 {
     [Header("Timeline")]
     [SerializeField] private PlayableDirector timelineDirector;
-    [SerializeField] private bool pauseTimelineDuringDialogue = true;   
+   // [SerializeField] private bool pauseTimelineDuringDialogue = true;   
 
     public void OnSignalRecieved()
     {
@@ -16,11 +16,14 @@ public class TimelineManager : MonoBehaviour
     {
         if (timelineDirector != null)
             timelineDirector.playableGraph.GetRootPlayable(0).SetSpeed(0);
+        Debug.Log("Timeline Pause");
+
     }
 
     private void ResumeTimeline()
     {
         if (timelineDirector != null)
             timelineDirector.playableGraph.GetRootPlayable(0).SetSpeed(1);
+        Debug.Log("Timeline Resume");
     }
 }
