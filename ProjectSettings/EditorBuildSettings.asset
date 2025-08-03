@@ -17,6 +17,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/IntroduceDandelion.unity
     guid: 979d7df7113db834281135ee42899aa7
+  - enabled: 1
+    path: Assets/Scenes/Mushroom.unity
+    guid: 8a12c90fdab29443b91b6fa37cb0468f
+  - enabled: 1
+    path: Assets/Scenes/MushroomGame.unity
+    guid: 5e80b2bea178047749c9602074938653
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0

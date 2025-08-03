@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 public class CutsceneControler : MonoBehaviour
 {
     [SerializeField] private PlayableDirector director;
+    [SerializeField] private string nextSceneName;
 
 
     void Start()
@@ -17,6 +18,6 @@ public class CutsceneControler : MonoBehaviour
 
     void OnTimelineStopped(PlayableDirector obj)
     {
-        SceneManager.LoadScene("Dandelion Game");
+        SceneManager.LoadScene(nextSceneName);
     }
 }
