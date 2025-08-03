@@ -106,6 +106,23 @@ public class MyceliumWalker : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Destroys all generated line segments and resets internal flags.
+    /// </summary>
+    public void Clear()
+    {
+        // destroy every child segment (each segment is one GameObject)
+        foreach (Transform child in transform)
+            Destroy(child.gameObject);
+
+        // reset state so Generate(...) will work again
+        IsReady        = false;
+        hasFiredEvent  = false;
+        remainingWalkers = 0;
+        totalWalkers     = 0;
+        // (center will get recomputed when you next Generate)
+    }
+
     void CenterMycelium()
     {
         var lines = GetComponentsInChildren<LineRenderer>();
