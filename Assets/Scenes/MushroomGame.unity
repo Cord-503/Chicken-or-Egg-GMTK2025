@@ -832,7 +832,7 @@ MonoBehaviour:
   - options: 090000000a0000000b000000
     sprites:
     - {fileID: 7675826601332790545, guid: c2adc4cf00f304996b1d1e12597e4105, type: 3}
-    - {fileID: 6430100609296634712, guid: 53c6e4064c81a460bb854354ec08a6c4, type: 3}
+    - {fileID: -855298285791758126, guid: cf0f03ef08d97544eb9ba509cabf5838, type: 3}
     - {fileID: -7070431899882351391, guid: 3837f0820773b4e99bbe69384d3ae329, type: 3}
     correct: 10
   - options: 060000000700000008000000
