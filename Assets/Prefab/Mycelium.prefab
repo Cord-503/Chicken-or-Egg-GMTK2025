@@ -45,9 +45,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   walkers: 20
-  stepsPerWalker: 10
   stepLength: 0.5
-  branchChance: 0.053
+  branchChance: 0.05
+  stepInterval: 0.15
   horizonY: 0
   lineSegmentPrefab: {fileID: 6892315670537110376, guid: 1ccba87bce8344558a9ad20040a77cf4, type: 3}
-  center: {x: 0, y: 0, z: 0}

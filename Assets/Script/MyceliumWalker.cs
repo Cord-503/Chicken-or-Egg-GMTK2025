@@ -7,7 +7,8 @@ public class MyceliumWalker : MonoBehaviour
     public int walkers = 20;
     public float stepLength = 0.2f;
     [Range(0,1)] public float branchChance = 0.05f;
-
+    public float stepInterval = 0.1f;
+    
     [Header("Soil Boundary")]
     public float horizonY = 0f;               // y-level of the soil surface
 
@@ -91,7 +92,7 @@ public class MyceliumWalker : MonoBehaviour
                 StartCoroutine(SpawnWalker());
             }
 
-            yield return null;
+            yield return new WaitForSeconds(stepInterval);
         }
 
         remainingWalkers--;

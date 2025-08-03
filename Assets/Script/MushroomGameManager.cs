@@ -1,5 +1,6 @@
 // GameManager.cs
 using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 using System.Collections.Generic;
 
@@ -55,6 +56,9 @@ public class MushroomGameManager : MonoBehaviour
             var opt = Instantiate(optionPrefab, inventoryPanel);
             opt.itemType = stage.options[i];
             opt.icon.sprite = stage.sprites[i];
+            var sprite = stage.sprites[i];
+            var fitter = opt.GetComponent<AspectRatioFitter>();
+            fitter.aspectRatio = (float)sprite.rect.width / sprite.rect.height;
         }
     }
 
@@ -69,7 +73,7 @@ public class MushroomGameManager : MonoBehaviour
             FadeAndRemove(item);
             // grow it
             feedCount++;
-            mycelium.ContinueGrowth(20, 3*(1+currentStage));
+            mycelium.ContinueGrowth(20, 5 + 3*currentStage);
 
             // advance
             currentStage++;
@@ -81,6 +85,7 @@ public class MushroomGameManager : MonoBehaviour
             {
                 // quiz done
                 hasFinishedGrowth = true;
+                Destroy(item.gameObject);
                 spawner.SpawnAt(mycelium.center + mycelium.transform.position);
             }
         }
