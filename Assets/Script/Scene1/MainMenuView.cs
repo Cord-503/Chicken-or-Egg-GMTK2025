@@ -28,7 +28,7 @@ public class MainMenuView : MonoBehaviour
         yield return new WaitForSeconds(d);
         fadeInOutBlack_Anim.SetBool("FadeOut", true);
         yield return new WaitForSeconds(0.5f);
-        SceneManager.LoadScene("Dandelion Game");
+        SceneManager.LoadScene("IntroduceDandelion");
     }
 
 }
