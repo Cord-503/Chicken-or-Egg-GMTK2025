@@ -7,10 +7,16 @@ public class CutsceneControler : MonoBehaviour
     [SerializeField] private PlayableDirector director;
 
 
-    private void OnCutsceneEnd(PlayableDirector director)
+    void Start()
     {
-        SceneManager.LoadScene("Dandelion Game");
-
+        if (director != null)
+        {
+            director.stopped += OnTimelineStopped;
+        }
     }
 
+    void OnTimelineStopped(PlayableDirector obj)
+    {
+        SceneManager.LoadScene("Dandelion Game");
+    }
 }
