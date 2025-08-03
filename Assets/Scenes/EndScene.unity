@@ -951,6 +951,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fadeInOutBlack_Anim: {fileID: 380290564}
   delay: 0.5
+  sceneToLoad: Opening
 --- !u!1 &1927842443
 GameObject:
   m_ObjectHideFlags: 0

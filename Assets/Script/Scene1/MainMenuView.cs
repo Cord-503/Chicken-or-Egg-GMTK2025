@@ -31,4 +31,16 @@ public class MainMenuView : MonoBehaviour
         SceneManager.LoadScene("IntroduceDandelion");
     }
 
+    public void OnCreditClicked()
+    {
+        StartCoroutine(DelayAndLoadCredit());
+    }
+    IEnumerator DelayAndLoadCredit()
+    {
+        yield return new WaitForSeconds(0.5f);
+        fadeInOutBlack_Anim.SetBool("FadeOut", true);
+        yield return new WaitForSeconds(0.5f);
+        SceneManager.LoadScene("Credit");
+    }
+
 }
