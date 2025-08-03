@@ -200,7 +200,7 @@ Transform:
   m_GameObject: {fileID: 16895238}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3.3707, y: -0.5453, z: 0}
+  m_LocalPosition: {x: 2.945, y: -0.389, z: 0}
   m_LocalScale: {x: 0.22168379, y: 0.2212918, z: 0.23058435}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -367,7 +367,7 @@ Transform:
   m_GameObject: {fileID: 112683781}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.7128, y: 1.501, z: 0}
+  m_LocalPosition: {x: -0.266, y: 1.512, z: 0}
   m_LocalScale: {x: 0.32429275, y: 0.32371932, z: 0.33731306}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -384,6 +384,22 @@ PrefabInstance:
     - target: {fileID: 328944327981664481, guid: 073aab116bfa6d249af2a128203a3f94, type: 3}
       propertyPath: m_Name
       value: Introduction (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4248907902023968183, guid: 073aab116bfa6d249af2a128203a3f94, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 22.831
+      objectReference: {fileID: 0}
+    - target: {fileID: 4248907902023968183, guid: 073aab116bfa6d249af2a128203a3f94, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 200.7407
+      objectReference: {fileID: 0}
+    - target: {fileID: 4248907902023968183, guid: 073aab116bfa6d249af2a128203a3f94, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 84
+      objectReference: {fileID: 0}
+    - target: {fileID: 4248907902023968183, guid: 073aab116bfa6d249af2a128203a3f94, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -195
       objectReference: {fileID: 0}
     - target: {fileID: 4571077704828654162, guid: 073aab116bfa6d249af2a128203a3f94, type: 3}
       propertyPath: m_Pivot.x
@@ -411,11 +427,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4571077704828654162, guid: 073aab116bfa6d249af2a128203a3f94, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 800
+      value: 769.3425
       objectReference: {fileID: 0}
     - target: {fileID: 4571077704828654162, guid: 073aab116bfa6d249af2a128203a3f94, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 300
+      value: 340.9052
       objectReference: {fileID: 0}
     - target: {fileID: 4571077704828654162, guid: 073aab116bfa6d249af2a128203a3f94, type: 3}
       propertyPath: m_LocalPosition.x
@@ -447,11 +463,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4571077704828654162, guid: 073aab116bfa6d249af2a128203a3f94, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 1458
+      value: 1362
       objectReference: {fileID: 0}
     - target: {fileID: 4571077704828654162, guid: 073aab116bfa6d249af2a128203a3f94, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -244
+      value: -460
       objectReference: {fileID: 0}
     - target: {fileID: 4571077704828654162, guid: 073aab116bfa6d249af2a128203a3f94, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -467,9 +483,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7141920909035827827, guid: 073aab116bfa6d249af2a128203a3f94, type: 3}
       propertyPath: m_text
-      value: "What Is a Dandelion Seed?\r\nA dandelion seed has a fluffy top called
-        a pappus.\n\r\n\rIt works like a parachute, helping the seed fly in the wind.\r\nAt
-        the bottom is the real seed, ready to grow when it lands in the soil."
+      value: "A dandelion seed has a fluffy top called a pappus.\n\r\n\rIt works
+        like a parachute, helping the seed fly in the wind.\n\r\nAt the bottom is
+        the real seed, ready to grow when it lands in the soil."
+      objectReference: {fileID: 0}
+    - target: {fileID: 7141920909035827827, guid: 073aab116bfa6d249af2a128203a3f94, type: 3}
+      propertyPath: m_fontSize
+      value: 45
+      objectReference: {fileID: 0}
+    - target: {fileID: 7141920909035827827, guid: 073aab116bfa6d249af2a128203a3f94, type: 3}
+      propertyPath: m_fontStyle
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7141920909035827827, guid: 073aab116bfa6d249af2a128203a3f94, type: 3}
       propertyPath: m_fontColor.b
@@ -482,6 +506,10 @@ PrefabInstance:
     - target: {fileID: 7141920909035827827, guid: 073aab116bfa6d249af2a128203a3f94, type: 3}
       propertyPath: m_fontColor.r
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7141920909035827827, guid: 073aab116bfa6d249af2a128203a3f94, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 45
       objectReference: {fileID: 0}
     - target: {fileID: 7141920909035827827, guid: 073aab116bfa6d249af2a128203a3f94, type: 3}
       propertyPath: m_fontColor32.rgba
@@ -576,11 +604,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4571077704828654162, guid: 073aab116bfa6d249af2a128203a3f94, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 246
+      value: 294
       objectReference: {fileID: 0}
     - target: {fileID: 4571077704828654162, guid: 073aab116bfa6d249af2a128203a3f94, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -551
+      value: -662
       objectReference: {fileID: 0}
     - target: {fileID: 4571077704828654162, guid: 073aab116bfa6d249af2a128203a3f94, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -595,6 +623,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7141920909035827827, guid: 073aab116bfa6d249af2a128203a3f94, type: 3}
+      propertyPath: m_fontSize
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 7141920909035827827, guid: 073aab116bfa6d249af2a128203a3f94, type: 3}
       propertyPath: m_fontColor.b
       value: 1
       objectReference: {fileID: 0}
@@ -605,6 +637,10 @@ PrefabInstance:
     - target: {fileID: 7141920909035827827, guid: 073aab116bfa6d249af2a128203a3f94, type: 3}
       propertyPath: m_fontColor.r
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7141920909035827827, guid: 073aab116bfa6d249af2a128203a3f94, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 7141920909035827827, guid: 073aab116bfa6d249af2a128203a3f94, type: 3}
       propertyPath: m_fontColor32.rgba
@@ -731,7 +767,7 @@ Transform:
   m_GameObject: {fileID: 618085151}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: 0.99960953, w: -0.027943563}
-  m_LocalPosition: {x: 1.6, y: -2.23, z: 0}
+  m_LocalPosition: {x: 1.234, y: -1.67, z: 0}
   m_LocalScale: {x: 0.1, y: 0.1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1101,7 +1137,7 @@ Transform:
   m_GameObject: {fileID: 910254023}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: 0.86016136, w: 0.51002204}
-  m_LocalPosition: {x: -2.41, y: -2.04, z: 0}
+  m_LocalPosition: {x: -2.328, y: -1.51, z: 0}
   m_LocalScale: {x: 0.1, y: 0.1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1188,7 +1224,7 @@ Transform:
   m_GameObject: {fileID: 965765053}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0.5538371, w: 0.8326251}
-  m_LocalPosition: {x: 1.57, y: 0.82, z: 0}
+  m_LocalPosition: {x: 1.318, y: 1.307, z: 0}
   m_LocalScale: {x: 0.1, y: 0.1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1298,7 +1334,7 @@ Transform:
   m_GameObject: {fileID: 998713641}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -4.1934, y: -0.7459, z: 0}
+  m_LocalPosition: {x: -3.52, y: -0.23, z: 0}
   m_LocalScale: {x: 0.18956517, y: 0.18922997, z: 0.19717617}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1472,7 +1508,7 @@ Transform:
   m_GameObject: {fileID: 1414169690}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0.03398118, w: 0.9994225}
-  m_LocalPosition: {x: -2.82, y: 0.835, z: 0}
+  m_LocalPosition: {x: -2.207, y: 1.202, z: 0}
   m_LocalScale: {x: 0.1, y: 0.1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1552,11 +1588,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4571077704828654162, guid: 073aab116bfa6d249af2a128203a3f94, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 472
+      value: 1291
       objectReference: {fileID: 0}
     - target: {fileID: 4571077704828654162, guid: 073aab116bfa6d249af2a128203a3f94, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -924
+      value: -904
       objectReference: {fileID: 0}
     - target: {fileID: 4571077704828654162, guid: 073aab116bfa6d249af2a128203a3f94, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -1576,6 +1612,10 @@ PrefabInstance:
         sky, like parachutes looking for a new home!\u201D"
       objectReference: {fileID: 0}
     - target: {fileID: 7141920909035827827, guid: 073aab116bfa6d249af2a128203a3f94, type: 3}
+      propertyPath: m_fontSize
+      value: 43
+      objectReference: {fileID: 0}
+    - target: {fileID: 7141920909035827827, guid: 073aab116bfa6d249af2a128203a3f94, type: 3}
       propertyPath: m_fontColor.b
       value: 1
       objectReference: {fileID: 0}
@@ -1586,6 +1626,10 @@ PrefabInstance:
     - target: {fileID: 7141920909035827827, guid: 073aab116bfa6d249af2a128203a3f94, type: 3}
       propertyPath: m_fontColor.r
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7141920909035827827, guid: 073aab116bfa6d249af2a128203a3f94, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 43
       objectReference: {fileID: 0}
     - target: {fileID: 7141920909035827827, guid: 073aab116bfa6d249af2a128203a3f94, type: 3}
       propertyPath: m_fontColor32.rgba
@@ -1680,11 +1724,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4571077704828654162, guid: 073aab116bfa6d249af2a128203a3f94, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 1695
+      value: 1676
       objectReference: {fileID: 0}
     - target: {fileID: 4571077704828654162, guid: 073aab116bfa6d249af2a128203a3f94, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -606
+      value: -332
       objectReference: {fileID: 0}
     - target: {fileID: 4571077704828654162, guid: 073aab116bfa6d249af2a128203a3f94, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -1974,7 +2018,7 @@ Transform:
   m_GameObject: {fileID: 1845433640}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.7128, y: -2.9685, z: 0}
+  m_LocalPosition: {x: -0.355, y: -2.692, z: 0}
   m_LocalScale: {x: 0.49965847, y: 0.49877495, z: 0.51971966}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2018,7 +2062,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4571077704828654162, guid: 073aab116bfa6d249af2a128203a3f94, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 450
+      value: 588.8894
       objectReference: {fileID: 0}
     - target: {fileID: 4571077704828654162, guid: 073aab116bfa6d249af2a128203a3f94, type: 3}
       propertyPath: m_SizeDelta.y
@@ -2054,11 +2098,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4571077704828654162, guid: 073aab116bfa6d249af2a128203a3f94, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 1429
+      value: 390
       objectReference: {fileID: 0}
     - target: {fileID: 4571077704828654162, guid: 073aab116bfa6d249af2a128203a3f94, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -914
+      value: -930
       objectReference: {fileID: 0}
     - target: {fileID: 4571077704828654162, guid: 073aab116bfa6d249af2a128203a3f94, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -2074,10 +2118,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7141920909035827827, guid: 073aab116bfa6d249af2a128203a3f94, type: 3}
       propertyPath: m_text
-      value: '"Click the flower to watch it change!"
-
-        "Did you know? One
-        dandelion can grow over 100 seeds!"'
+      value: '"Did you know? One dandelion can grow over 100 seeds!"'
       objectReference: {fileID: 0}
     - target: {fileID: 7141920909035827827, guid: 073aab116bfa6d249af2a128203a3f94, type: 3}
       propertyPath: m_fontColor.b
@@ -2393,11 +2434,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4571077704828654162, guid: 073aab116bfa6d249af2a128203a3f94, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 516.7
+      value: 517
       objectReference: {fileID: 0}
     - target: {fileID: 4571077704828654162, guid: 073aab116bfa6d249af2a128203a3f94, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -195
+      value: -243
       objectReference: {fileID: 0}
     - target: {fileID: 4571077704828654162, guid: 073aab116bfa6d249af2a128203a3f94, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -2417,6 +2458,10 @@ PrefabInstance:
         a little sun shining in the grass.\u201D"
       objectReference: {fileID: 0}
     - target: {fileID: 7141920909035827827, guid: 073aab116bfa6d249af2a128203a3f94, type: 3}
+      propertyPath: m_fontSize
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 7141920909035827827, guid: 073aab116bfa6d249af2a128203a3f94, type: 3}
       propertyPath: m_fontColor.b
       value: 1
       objectReference: {fileID: 0}
@@ -2427,6 +2472,10 @@ PrefabInstance:
     - target: {fileID: 7141920909035827827, guid: 073aab116bfa6d249af2a128203a3f94, type: 3}
       propertyPath: m_fontColor.r
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7141920909035827827, guid: 073aab116bfa6d249af2a128203a3f94, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 7141920909035827827, guid: 073aab116bfa6d249af2a128203a3f94, type: 3}
       propertyPath: m_fontColor32.rgba
