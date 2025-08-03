@@ -11,7 +11,7 @@ public class CountDownManager : MonoBehaviour
     [SerializeField] private float countdownTime = 25f; // 倒计时秒数
     [SerializeField] private TextMeshProUGUI countdownText;
     [SerializeField] private Animator fadeInOutBlack_Anim;
-    [SerializeField] private GameObject scoreCounter;
+
     
     private float delay = 5.0f;
     private float currentTime;
@@ -43,11 +43,20 @@ public class CountDownManager : MonoBehaviour
     void CountdownFinished()
     {
         countdownText.text = "TIMES UP!";
-        
 
-        // 你可以在这里触发场景切换、开始游戏等
+        GameObject[] scoreZones = GameObject.FindGameObjectsWithTag("ScoreZone");
+        foreach (GameObject zone in scoreZones)
+        {
+            Collider2D col = zone.GetComponent<Collider2D>();
+            if (col != null)
+            {
+                col.enabled = false;
+            }
+        }
+
         StartCoroutine(DelayAndLoadScene(delay));
     }
+
 
 
 

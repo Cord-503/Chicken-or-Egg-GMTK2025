@@ -298,8 +298,6 @@ PlayableDirector:
     value: {fileID: 1088266403}
   - key: {fileID: -189520239967055790, guid: b414d4697a2de1542a07dc41a8db2d37, type: 2}
     value: {fileID: 917751451}
-  - key: {fileID: 8102508565775795382, guid: b414d4697a2de1542a07dc41a8db2d37, type: 2}
-    value: {fileID: 1675451750}
   m_ExposedReferences:
     m_References: []
 --- !u!114 &226622125
@@ -346,7 +344,7 @@ Transform:
   m_GameObject: {fileID: 325042254}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 4.5, y: 0, z: 0}
+  m_LocalPosition: {x: 3.96, y: -0.39, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -364,26 +362,6 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1219254573}
-    - target: {fileID: 189390245046453858, guid: c9b7ca672b5861d4b9feb6a961124d29, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: OnContinueButtonClicked
-      objectReference: {fileID: 0}
-    - target: {fileID: 1128673897801432762, guid: c9b7ca672b5861d4b9feb6a961124d29, type: 3}
-      propertyPath: m_Color.a
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1128673897801432762, guid: c9b7ca672b5861d4b9feb6a961124d29, type: 3}
-      propertyPath: m_Color.b
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1128673897801432762, guid: c9b7ca672b5861d4b9feb6a961124d29, type: 3}
-      propertyPath: m_Color.g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1128673897801432762, guid: c9b7ca672b5861d4b9feb6a961124d29, type: 3}
-      propertyPath: m_Color.r
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 1269375161660156363, guid: c9b7ca672b5861d4b9feb6a961124d29, type: 3}
       propertyPath: m_Name
       value: Button
@@ -609,11 +587,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4571077704828654162, guid: 073aab116bfa6d249af2a128203a3f94, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 796
+      value: 498.3
       objectReference: {fileID: 0}
     - target: {fileID: 4571077704828654162, guid: 073aab116bfa6d249af2a128203a3f94, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -929
+      value: -197.1
       objectReference: {fileID: 0}
     - target: {fileID: 4571077704828654162, guid: 073aab116bfa6d249af2a128203a3f94, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -631,6 +609,14 @@ PrefabInstance:
       propertyPath: m_text
       value: 'Mushrooms begin as white, thread-like roots called mycelium that spread
         underground. '
+      objectReference: {fileID: 0}
+    - target: {fileID: 7141920909035827827, guid: 073aab116bfa6d249af2a128203a3f94, type: 3}
+      propertyPath: m_fontSize
+      value: 44
+      objectReference: {fileID: 0}
+    - target: {fileID: 7141920909035827827, guid: 073aab116bfa6d249af2a128203a3f94, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 44
       objectReference: {fileID: 0}
     - target: {fileID: 7141920909035827827, guid: 073aab116bfa6d249af2a128203a3f94, type: 3}
       propertyPath: m_fontColor32.rgba
@@ -887,7 +873,7 @@ Transform:
   m_GameObject: {fileID: 801499907}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4, y: 2, z: 0}
+  m_LocalPosition: {x: -4.07, y: 1.04, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -967,11 +953,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4571077704828654162, guid: 073aab116bfa6d249af2a128203a3f94, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 307
+      value: 360
       objectReference: {fileID: 0}
     - target: {fileID: 4571077704828654162, guid: 073aab116bfa6d249af2a128203a3f94, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -179
+      value: -1025
       objectReference: {fileID: 0}
     - target: {fileID: 4571077704828654162, guid: 073aab116bfa6d249af2a128203a3f94, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -988,6 +974,14 @@ PrefabInstance:
     - target: {fileID: 7141920909035827827, guid: 073aab116bfa6d249af2a128203a3f94, type: 3}
       propertyPath: m_text
       value: 'These soft threads absorb food to help mushrooms grow. '
+      objectReference: {fileID: 0}
+    - target: {fileID: 7141920909035827827, guid: 073aab116bfa6d249af2a128203a3f94, type: 3}
+      propertyPath: m_fontSize
+      value: 44
+      objectReference: {fileID: 0}
+    - target: {fileID: 7141920909035827827, guid: 073aab116bfa6d249af2a128203a3f94, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 44
       objectReference: {fileID: 0}
     - target: {fileID: 7141920909035827827, guid: 073aab116bfa6d249af2a128203a3f94, type: 3}
       propertyPath: m_fontColor32.rgba
@@ -1180,11 +1174,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4571077704828654162, guid: 073aab116bfa6d249af2a128203a3f94, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 1674
+      value: 1523
       objectReference: {fileID: 0}
     - target: {fileID: 4571077704828654162, guid: 073aab116bfa6d249af2a128203a3f94, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -387
+      value: -345
       objectReference: {fileID: 0}
     - target: {fileID: 4571077704828654162, guid: 073aab116bfa6d249af2a128203a3f94, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -1203,6 +1197,14 @@ PrefabInstance:
       value: "Fungi help break down things from nature, like fallen leaves and old
         wood, but they can't break down things people make, like plastic toys or
         metal cans.\r"
+      objectReference: {fileID: 0}
+    - target: {fileID: 7141920909035827827, guid: 073aab116bfa6d249af2a128203a3f94, type: 3}
+      propertyPath: m_fontSize
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 7141920909035827827, guid: 073aab116bfa6d249af2a128203a3f94, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 7141920909035827827, guid: 073aab116bfa6d249af2a128203a3f94, type: 3}
       propertyPath: m_fontColor32.rgba
@@ -1492,7 +1494,7 @@ Transform:
   m_GameObject: {fileID: 1445127768}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2, y: 0, z: 0}
+  m_LocalPosition: {x: 0.92, y: -0.3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1630,11 +1632,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4571077704828654162, guid: 073aab116bfa6d249af2a128203a3f94, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 1000
+      value: 959.7
       objectReference: {fileID: 0}
     - target: {fileID: 4571077704828654162, guid: 073aab116bfa6d249af2a128203a3f94, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -200
+      value: -349.3
       objectReference: {fileID: 0}
     - target: {fileID: 4571077704828654162, guid: 073aab116bfa6d249af2a128203a3f94, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -1652,6 +1654,14 @@ PrefabInstance:
       propertyPath: m_text
       value: When ready, mushrooms pop out of the ground, looking like little umbrellas
         or hats, and release tiny spores to start new mushrooms.
+      objectReference: {fileID: 0}
+    - target: {fileID: 7141920909035827827, guid: 073aab116bfa6d249af2a128203a3f94, type: 3}
+      propertyPath: m_fontSize
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 7141920909035827827, guid: 073aab116bfa6d249af2a128203a3f94, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 7141920909035827827, guid: 073aab116bfa6d249af2a128203a3f94, type: 3}
       propertyPath: m_fontColor32.rgba
