@@ -6,6 +6,7 @@ TagManager:
   tags:
   - branch
   - Fish
+  - Mushroom
   layers:
   - Default
   - TransparentFX
